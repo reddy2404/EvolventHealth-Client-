@@ -21,7 +21,7 @@
                 <td>First Name :
                 </td>
                 <td>
-                    <asp:TextBox ID="txtFirstName" runat="server" Style="width: 300px"></asp:TextBox>
+                    <asp:TextBox ID="txtFirstName" runat="server" Style="width: 300px" placeholder="FirstName" ></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="revFName" ControlToValidate="txtFirstName" runat="server" ErrorMessage="Field required" ValidationGroup="insert"></asp:RequiredFieldValidator>
@@ -35,7 +35,7 @@
                 <td>Last Name :
                 </td>
                 <td>
-                    <asp:TextBox ID="txtLastName" runat="server" Style="width: 300px"></asp:TextBox>
+                    <asp:TextBox ID="txtLastName" runat="server" Style="width: 300px" placeholder="LastName"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="revLName" ControlToValidate="txtLastName" runat="server" ErrorMessage="Field required" ValidationGroup="insert"></asp:RequiredFieldValidator>
@@ -49,10 +49,10 @@
                 <td>Email :
                 </td>
                 <td>
-                    <asp:TextBox ID="txtEamil" runat="server" Style="width: 300px"></asp:TextBox>
+                    <asp:TextBox ID="txtEamil" runat="server" Style="width: 300px" placeholder="xxxxxx@xx.xxx"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Inval id"
+                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Inval id(xxxxxx@xx.xxx)"
                         ControlToValidate="txtEamil" SetFocusOnError="true" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGroup="insert"> </asp:RegularExpressionValidator>
                 </td>
             </tr>
@@ -60,18 +60,18 @@
                 <td>Phone No :
                 </td>
                 <td>
-                    <asp:TextBox ID="txtPhone" runat="server" Style="width: 300px"></asp:TextBox>
+                    <asp:TextBox ID="txtPhone" runat="server" Style="width: 300px" placeholder="xxx-xxx-xxxx"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RegularExpressionValidator ID="revPhone" runat="server"
-                        ErrorMessage="Invalid Number" ControlToValidate="txtPhone" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" ValidationGroup="insert"></asp:RegularExpressionValidator>
+                        ErrorMessage="Invalid Number(xxx-xxx-xxxx)" ControlToValidate="txtPhone" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" ValidationGroup="insert"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td>Status :
                 </td>
                 <td>
-                    <asp:DropDownList ID="ddlStatus" runat="server" AutoPostBack="false" Width="130px">
+                    <asp:DropDownList ID="ddlStatus" runat="server" AutoPostBack="false" Width="130px" >
                         <asp:ListItem></asp:ListItem>
                         <asp:ListItem>true</asp:ListItem>
                         <asp:ListItem>false</asp:ListItem>
